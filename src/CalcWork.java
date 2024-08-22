@@ -1,33 +1,44 @@
 import java.io.IOException;
+import java.util.Scanner;
 
 public class CalcWork {
-    private String insruction = " Введите выражение в формате a+b=(или Enter) или a! \n доступные операции: '+' '-' '*' '/' '!' '^' '%' \n для выхода нажмите \"Esc\". для очистки дисплея нажмите \"пробел\"\n ";
-    public String calcStart(){
-        System.out.println("jklsadhbflabovbnasd\n fjsdphgoihpwae");
-        clearConsole();
-
+    public void calcStart() throws IOException{
+        Scanner in = new Scanner(System.in);
+        CLS clearing = new CLS();
 
         
-        return "";
-    }
+        int a = 0,
+            b = 0;
+        char operator = '+';
+        String want,
+               example;
+        clearing.clear();
 
-    
+        while(true){
+            example = in.nextLine();
+          
+            Operation calculate = new Operation(a, b, operator);
+            System.out.println(calculate.operation());
 
-    private void clearConsole(){        
-                           
-            CLS clear = new CLS();
-             try {
-                 clear.clearConsle("");
-             } catch (IOException e) {
-                 // TODO Auto-generated catch block
-                 e.printStackTrace();
-                 } catch (InterruptedException e) {
-                 // TODO Auto-generated catch block
-                 e.printStackTrace();
-             }   
+            System.out.println(" q - выход, c - очистить решения, enter - продолжить.");
+            want = in.nextLine();
+
+            switch(want){
+                case "q":
+                    in.close();
+                    System.exit(0);
+                    break;
+                case "c":
+                clearing.clear();
+                default:
+                break;
+            }
+            
+        }
+
+          
         
-        System.out.println(insruction);
-    }
-   
+        
+    }    
 
 }

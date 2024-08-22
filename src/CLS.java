@@ -1,6 +1,8 @@
 import java.io.IOException;
 
 public class CLS {
+    private String insruction = " Введите выражение в формате a+b=(или Enter)\n доступные операции: '+' '-' '*' '/'\n";
+
     
     public void clearConsle (String... arg) throws IOException, InterruptedException {
         OSDetected oSystem = new OSDetected();
@@ -16,7 +18,20 @@ public class CLS {
             default:
                 break;
         }
-    }  
+    } 
+    
+    public void clear(){        
+                           
+            try {
+                clearConsle("");
+            }catch (IOException e) {
+                e.printStackTrace();
+            }catch (InterruptedException e) {
+                e.printStackTrace();
+            }   
+        
+        System.out.println(insruction);
+    }
 
 }
 
