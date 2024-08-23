@@ -20,6 +20,7 @@ public class Operation {
                 break;
             case '/':
                 _result = _a / _b;
+                break;
             case '*':
                 _result = _a * _b;            
             default:

@@ -1,7 +1,7 @@
 import java.io.IOException;
 
 public class CLS {
-    private String insruction = " Введите выражение в формате a+b=(или Enter)\n доступные операции: '+' '-' '*' '/'\n";
+    private String insruction = " Введите выражение в формате a + b Enter\n доступные операции: '+' '-' '*' '/'\n";
 
     
     public void clearConsle (String... arg) throws IOException, InterruptedException {

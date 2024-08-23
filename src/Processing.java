@@ -15,7 +15,7 @@ public class Processing {
         _example = _example.trim();
 
         // Регулярное выражение для извлечения чисел и оператора
-        Pattern pattern = Pattern.compile("^(\\d+)\\s*([+\\-*/])\\s*(\\d+)$");
+        Pattern pattern = Pattern.compile("^(\\d+)\\s*([+\\-\\*\\/])\\s*(\\d+)$");
         Matcher matcher = pattern.matcher(_example);
 
         if (matcher.matches()) {
