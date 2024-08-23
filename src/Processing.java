@@ -26,15 +26,15 @@ public class Processing {
 
             // Проверка диапазона чисел и допустимости оператора
             if (a < 1 || a > 10 || b < 1 || b > 10) {
-                throw new IllegalArgumentException("Numbers must be between 1 and 10 inclusive.");
+                throw new IllegalArgumentException("Допустимый диапазон чисел  от 1 до 10 включительно.");
             }
             if (operator != '+' && operator != '-' && operator != '*' && operator != '/') {
-                throw new IllegalArgumentException("Operator must be one of +, -, *, /.");
+                throw new IllegalArgumentException("Допустимы операторы только: +, -, *, /.");
             }
 
         }
         else {
-            throw new IllegalArgumentException("Invalid input format. The format must be 'number operator number'.");
+            throw new IllegalArgumentException("Не верный формат ввода. Допустимый формат 'число оператор число'.");
         }
 
         Operation operation = new Operation(a, b, operator);
