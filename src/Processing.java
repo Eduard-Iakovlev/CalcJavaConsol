@@ -34,7 +34,7 @@ public class Processing {
 
         }
         else {
-            throw new IllegalArgumentException("Не верный формат ввода. Допустимый формат 'число оператор число'.");
+            throw new IllegalArgumentException("Не верный формат ввода. Допустимый формат 'число оператор число'. Числа допустимы только целые");
         }
 
         Operation operation = new Operation(a, b, operator);
