@@ -1,29 +1,27 @@
-import java.io.IOException;
 import java.util.Scanner;
 
 public class CalcWork {
-    public void calcStart() throws IOException{
+    public void calcStart(){
         Scanner in = new Scanner(System.in);
         CLS clearing = new CLS();
-
+        Processing processing;
         
-        int a = 0,
-            b = 0;
-        char operator = '+';
-        String want,
+        String work,
                example;
+
         clearing.clear();
 
         while(true){
+
+            System.out.println("Пример:");
             example = in.nextLine();
-          
-            Operation calculate = new Operation(a, b, operator);
-            System.out.println(calculate.operation());
+            processing = new Processing(example);
+            System.out.println("результат: " + processing.result());          
 
-            System.out.println(" q - выход, c - очистить решения, enter - продолжить.");
-            want = in.nextLine();
+            System.out.println(" Для выбора действия введите латинские символы:\nq - выход, c - очистить решения, enter - продолжить.");
+            work = in.nextLine();
 
-            switch(want){
+            switch(work){
                 case "q":
                     in.close();
                     System.exit(0);
@@ -34,10 +32,7 @@ public class CalcWork {
                 break;
             }
             
-        }
-
-          
-        
+        }      
         
     }    
 

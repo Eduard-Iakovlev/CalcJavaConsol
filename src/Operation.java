@@ -10,7 +10,7 @@ public class Operation {
         _operator = operator;
     }
 
-    public int operation(){
+    public int operations(){
         switch (_operator) {
             case '+':
                 _result = _a + _b;
